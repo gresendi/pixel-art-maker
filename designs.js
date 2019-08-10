@@ -1,6 +1,7 @@
 function makeGrid() {
 
   // Getting the input of height and width and then converting to integer
+  //so that it can be looped and used to create ul and li tags
   var heightInput=document.getElementById('inputHeight');
   var height=Number(heightInput.value);
   var widthInput=document.getElementById('inputWidth');
@@ -25,6 +26,8 @@ function makeGrid() {
       const att=document.createAttribute("style");//creating attribute
       collum[i].setAttributeNode(att);//setting that attribute to each li tag
       //adding an event listener so when clicked it will run the function
+      //it adds the listener to each li cell and changes the background
+      //based on what color the user chooses
       collum[i].addEventListener('click',function(){
 
         const col=document.getElementById('colorPicker');
